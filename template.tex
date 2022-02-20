@@ -1,0 +1,87 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[top=1in, bottom=1in, left=1in, right=1in]{geometry}
+\usepackage{parskip}
+\usepackage{graphicx}
+\usepackage{csquotes}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{hyperref}
+
+\usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,spacing=true,factor=1100,stretch=10,shrink=10]{microtype}
+\microtypecontext{spacing=nonfrench}
+
+% Tables
+\usepackage{booktabs}
+\usepackage{multirow}
+
+% Units
+\usepackage{siunitx}
+
+% Plots
+\usepackage{pgfplots}
+\usepackage{filecontents}
+\pgfplotsset{
+  compat=1.16,
+  width=14cm,
+  every axis plot/.append style={line width=2pt},
+  every axis plot post/.append style={
+    every mark/.append style={mark=none}
+  }
+}
+
+\usepackage[slovene]{babel}
+
+% 1.25 line height
+\renewcommand{\baselinestretch}{1.25} 
+
+% Bibilography is defined in bibliography.bib
+\usepackage[style=numeric,natbib=true]{biblatex}
+\bibliography{bibliography.bib}
+
+\begin{document}
+
+
+\thispagestyle{empty}
+
+\begin{figure}
+  \centering
+  \def\svgwidth{\columnwidth}
+  \input{img/vegova-vodoravna.pdf_tex}\vspace{50mm}
+\end{figure}
+
+\begin{center}
+  
+  \huge \textbf{Naslov} \\
+  \LARGE Podnaslov
+
+\end{center}
+
+\vfill
+
+\begin{minipage}{6cm}
+  \textbf{Mentor: Ime Priimek}
+\end{minipage}
+  \hfill
+\begin{minipage}{6cm}
+  \textbf{Avtor: Ime Priimek}
+\end{minipage}
+
+\begin{center}
+  \textbf{Ljubljana, \today}
+\end{center}
+
+\newpage
+
+\tableofcontents
+
+\listoffigures
+
+\listoftables
+
+\newpage
+
+\section{Uvod}
+
+
+\end{document}
